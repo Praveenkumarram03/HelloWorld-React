@@ -11,7 +11,7 @@ const SidebarContainer = styled.div`
 `;
 
 const Sidebar = styled.div`
-  background-color: #34495e;
+  background-color: green;
   color: white;
   width: ${(props) => (props.isOpen ? '250px' : '50px')};
   transition: width 0.3s ease-in-out;

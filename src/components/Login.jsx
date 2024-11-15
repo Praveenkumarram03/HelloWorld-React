@@ -25,12 +25,6 @@ const LoginWrapper = styled.div`
   box-sizing: border-box; /* Ensures padding is included in width calculation */
 `;
 
-const FormTitle = styled.h2`
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
-  font-family: 'Arial', sans-serif;
-  font-weight: 600;
-`;
 
 const InputField = styled.input`
   width: 95%;
@@ -73,7 +67,7 @@ const EyeIcon = styled.div`
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #3498db;
+ 
   font-size: 1.2rem;
 `;
 
@@ -114,7 +108,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Simulate login success
-    console.log("User logged in"); // Here you can replace with real authentication logic if needed.
+    console.log('User logged in'); // Here you can replace with real authentication logic if needed.
 
     // After login is successful, navigate to the next page
     navigate('/main'); // Redirect to the main page (replace '/main' with your actual route)
@@ -129,7 +123,8 @@ function Login() {
     <LoginContainer>
       <LoginWrapper>
         <form onSubmit={handleSubmit}>
-          <FormTitle>Welcome to WhatsAppcrm</FormTitle>
+          <h3>WELCOME BACK!!</h3>
+          <h2>Login Your WhatsAppCrm</h2>
 
           <div>
             <label htmlFor="email">Email</label>
@@ -146,7 +141,9 @@ function Login() {
                 id="password"
                 required
               />
-              
+              <EyeIcon onClick={togglePasswordVisibility}>
+                {passwordVisible ? <FaEyeSlash /> : <FaEye />}
+              </EyeIcon>
             </PasswordWrapper>
           </div>
 
@@ -156,7 +153,7 @@ function Login() {
 
           {/* Register Link */}
           <RegisterLink>
-            <p>Don't have an account? <Link to="/register">Register</Link></p>
+            <p>Don't have an account? <Link to="/register">Register Now</Link></p>
           </RegisterLink>
         </form>
       </LoginWrapper>

@@ -7,7 +7,6 @@ const RegisterContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
   height: 100vh; /* Ensures full height of the viewport */
   background: linear-gradient(135deg, #3b3f47, #1e2125);
   margin: 0; /* Prevents any page scroll */
